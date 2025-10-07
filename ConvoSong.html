@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Convocation Song</title>
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* Section Background */
+      #convo-song {
+        position: relative;
+        background: url("../img/mandala back.png") center/cover no-repeat;
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      /* Heading Styling */
+      #convo-song h1 {
+        font-family: "Cinzel Decorative", serif;
+        color: #f0ad4e;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+
+        -webkit-background-clip: text;
+
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Song Card */
+      .song-card {
+        background: linear-gradient(160deg, #242555, #582d7c);
+        color: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        /* more spacious */
+        text-align: center;
+        border: 2px solid #d4af37;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Card styling */
+      .song-card {
+        width: auto; /* let it grow naturally */
+        max-width: 85%; /* responsive */
+        padding: 4rem; /* uniform padding */
+        background-color: #4a3b6b;
+        color: #fff;
+        border-radius: 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        /* more spacious inside */
+        text-align: center;
+        border: 2px solid #d4af37;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Image */
+      .song-card img {
+        max-width: 270px;
+        max-height: 350px;
+        width: 100%;
+        height: auto;
+        display: block; /* ensures it centers */
+        margin: 0 auto 2rem; /* top 0, bottom 2rem, auto left/right */
+        padding: 10px; /* inside spacing */
+        border: 5px solid #964894;
+        background: #26265c;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease;
+      }
+
+      /* Hover effect for desktop */
+      .song-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+      }
+
+      .song-card:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Responsive for phones */
+      @media (max-width: 768px) {
+        .song-card {
+          padding: 2rem; /* smaller padding on mobile */
+          max-width: 95%; /* fit mobile screen */
+        }
+
+        .song-card img {
+          max-width: 90%; /* smaller image on mobile */
+          max-height: 300px; /* adjust height for mobile */
+          padding: 5px;
+        }
+
+        .song-card h6 {
+          font-size: 1.4rem; /* smaller title */
+        }
+
+        .song-card h5 {
+          font-size: 1.8rem; /* smaller event name */
+        }
+
+        .song-card p.text-muted {
+          font-size: 1rem; /* smaller year text */
+        }
+
+        .song-card audio {
+          height: 50px; /* smaller audio player */
+        }
+      }
+
+      .song-card h6 {
+        font-size: 1.6rem; /* bigger title */
+        margin-bottom: 1rem;
+      }
+      /* Gold heading inside card */
+      .song-card h5 {
+        font-size: 2rem; /* bigger event name */
+        margin-top: 1.5rem;
+        background: linear-gradient(45deg, #d4af37, #f9e79f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Year */
+      .song-card p.text-muted {
+        font-size: 1.2rem; /* bigger year */
+        margin-bottom: 1.5rem;
+        color: #98c1d9 !important;
+        font-weight: 600;
+      }
+
+      /* Audio Player */
+      .song-card audio {
+        margin-top: 2rem;
+        width: 100%;
+        height: 60px; /* taller play bar */
+        border-radius: 0;
+        outline: none;
+        background: #242555;
+      }
+      /* Convocation Button */
+      .btn-convocation {
+        background: linear-gradient(45deg, #964894, #582d7c);
+        color: white;
+        padding: 0.6rem 1.4rem;
+        border-radius: 30px;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      .btn-convocation:hover {
+        background: linear-gradient(45deg, #d4af37, #fbc02d);
+        color: #0b1c3d;
+      }
+    </style>
+  </head>
+
+  <body class="news-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img
+            src="assets/img/iiitdlogo.png"
+            class="img-fluid"
+            style="height: 140px"
+          />
+        </a>
+
+        <nav id="navmenu" class="navmenu d-flex align-items-center">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Guidelines.html">Guidelines</a></li>
+            <li><a href="DressCode.html">Dress Code</a></li>
+            <li><a href="StudentCorner.html">Student Corner</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="ConvoSong.html">Convo Song</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="sample.pdf">Brochure</a></li>
+          </ul>
+          <a href="#" class="btn-convocation ms-3">Watch Live</a>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <br /><br /><br />
+      <!-- Convocation Song Section -->
+      <section id="convo-song">
+        <div
+          class="container d-flex flex-column align-items-center justify-content-center"
+        >
+          <!-- Heading -->
+          <h1>Convocation Song</h1>
+
+          <div class="song-card">
+            <h6 class="mb-3">A Million Dreams</h6>
+
+            <img
+              src="assets/img/go.jpg"
+              alt="Convocation Song"
+              class="img-fluid"
+            />
+
+            <h5 class="fw-bold">14th Convocation</h5>
+            <p class="text-muted">2025</p>
+
+            <!-- Audio Player -->
+            <audio controls>
+              <source
+                src="assets/The_Greatest_Showman_-_A_Million_Dreams_CeeNaija.com_.mp3"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </section>
+      <!-- /Convocation Song Section -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="footer" class="footer position-relative dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span
+                class="sitename"
+                style="color: #d4af37; font-weight: 600; margin-bottom: 0.8rem"
+                >Contact Info</span
+              >
+            </a>
+            <div class="footer-contact pt-3">
+              <img
+                src="assets/img/logo2.png"
+                alt="IIIT Delhi Logo"
+                style="width: 170px; height: 170px; margin-bottom: 10px"
+              />
+              <p>Okhla phase III, New Delhi, India</p>
+
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>011 - 71985300</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@iiitd.ac.in</span></p>
+            </div>
+
+            <div class="social-links d-flex mt-4">
+              <a href="https://x.com/IIITDelhi"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="https://www.facebook.com/IIITDelhi"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/iiit.delhi/"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/school/iiit-delhi"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-3 footer-links">
+            <h4 style="color: #d4af37; font-weight: 600; margin-bottom: 0.8rem">
+              Web Archives
+            </h4>
+
+            <ul>
+              <li>
+                <a href="https://www.iiitd.ac.in/convocation2024/"
+                  ><i class="fas fa-bookmark"></i> Convocation 13</a
+                >
+              </li>
+              <li>
+                <a href="https://www.iiitd.ac.in/convocation2023/"
+                  ><i class="fas fa-bookmark"></i> Convocation 12</a
+                >
+              </li>
+              <li>
+                <a href="https://www.iiitd.ac.in/convocation22/"
+                  ><i class="fas fa-bookmark"></i> Convocation 11</a
+                >
+              </li>
+              <li>
+                <a href="https://www.iiitd.ac.in/convocation21/"
+                  ><i class="fas fa-bookmark"></i> Convocation 10</a
+                >
+              </li>
+              <li>
+                <a href="https://www.iiitd.ac.in/convocation20/"
+                  ><i class="fas fa-bookmark"></i> Convocation 9</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-3 footer-links">
+            <h4 style="color: #d4af37; font-weight: 600; margin-bottom: 0.8rem">
+              Gallery Archives
+            </h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-camera"></i> Convocation 13</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://photos.google.com/share/AF1QipOB0DQdztKPMNtVvbVF3GTkQpdyC_ovuMHwg1P6-twVFTyhYErzE71chyVpjgQLeQ?pli=1&key=Y0RZTzZuN0c0TDBIX1pRUFpLeXhCYktzajBUZGV3"
+                  ><i class="fa-solid fa-camera"></i> Convocation 12</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://photos.google.com/share/AF1QipOxGlZO38r_yeXepQZyefgg7qJ2k0SrgdX_hIfmkJgPMVJ1Ek3QPBOKljQypuhyNA?key=X1UzSWJ3dXB4X2lDQW9QTFRGMDN2bnFrUDZISFdR"
+                  ><i class="fa-solid fa-camera"></i> Convocation 11</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=DYxSAov-Kfs"
+                  ><i class="fa-solid fa-camera"></i> Convocation 10</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=EPv_dEhAKqA&t=1s"
+                  ><i class="fa-solid fa-camera"></i> Convocation 9</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          <span>Copyright © </span>
+          <strong class="px-1 sitename">2025 IIIT-Delhi.</strong>
+          <span>All Rights Reserved.</span>
+        </p>
+      </div>
+
+      <img
+        src="assets/img/building2.png"
+        alt="Building"
+        class="footer-building"
+      />
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
