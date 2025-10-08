@@ -76,7 +76,8 @@
   transform: scale(1.01);
   font-weight: bold;
 }
-.custom-schedule-table thead th {
-  white-space: normal; /* allow text to wrap */
-  word-wrap: break-word;
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
