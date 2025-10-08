@@ -714,11 +714,40 @@ h6 {
 .footer .footer-links ul a:hover {
   color: var(--accent-color);
 }
+.footer .col-lg-4,
+.footer .col-md-3 {
+  padding-left: 0 !important;
+}
 
+
+.footer .footer-contact {
+  padding-left: 0; /* Keep everything flush left */
+}
+
+.footer .footer-contact img {
+  display: block;
+  margin-left: 0;
+  margin-bottom: 10px;
+  width: 240px;
+  height: 180px;
+  max-width: 100%; /* responsive: prevent overflow */
+  height: auto;    /* maintain aspect ratio */
+}
+
+/* Text styling */
 .footer .footer-contact p {
   margin-bottom: 5px;
   font-size: 16px;
 }
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .footer .footer-contact img {
+    width: 180px;  /* slightly smaller logo */
+    margin: 0 auto 10px auto; /* center on small screens if desired */
+  }
+}
+
 
 .footer .copyright {
   padding: 25px 0;
