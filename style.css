@@ -76,8 +76,12 @@
   transform: scale(1.01);
   font-weight: bold;
 }
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto; /* horizontal scroll if needed */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .custom-schedule-table {
+    font-size: 14px; /* smaller font on mobile */
+  }
 }
