@@ -755,6 +755,13 @@ h6 {
 .footer-links ul li {
   margin-bottom: 0.3rem; /* closer list items */
 }
+/* Reset left margin for small screens */
+@media (max-width: 768px) {
+  .footer .footer-links:nth-child(3) {
+    margin-left: 0 !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
